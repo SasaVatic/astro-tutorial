@@ -1,0 +1,36 @@
+---
+import Social from './Social.astro';
+
+const socialLinks = [
+  {
+    platform: 'github',
+    username: 'SasaVatic',
+  },
+  {
+    platform: 'twitter',
+    username: 'SaaV59345676',
+  },
+  {
+    platform: 'linkedin',
+    username: 'in/sasa-vatic/',
+  },
+];
+---
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+  <p>
+    {
+      socialLinks.map((link) => (
+        <Social platform={link.platform} username={link.username} />
+      ))
+    }
+  </p>
+</footer>
